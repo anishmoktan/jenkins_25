@@ -15,16 +15,16 @@ class BasicTestCase(unittest.TestCase):
         self.assertEqual(app.debug, False)
 
     def test_1_signup(self):
-        req = {
-            "Action":"register",
-            "Username":"QA_Tester_Dec",
-            "Password":"password12345678",
-            "Email":"QA@gmail.com",
-            "FirstName":"Quality",
-            "LastName":"Assurance",
-            "Country":"USA",
-            "City":"New York City"
-        }
+#         req = {
+#             "Action":"register",
+#             "Username":"QA_Tester_Dec",
+#             "Password":"password12345678",
+#             "Email":"QA@gmail.com",
+#             "FirstName":"Quality",
+#             "LastName":"Assurance",
+#             "Country":"USA",
+#             "City":"New York City"
+#         }
 
         rv = self.app.post('/register', json=req)
         data = json.loads(rv.data)
